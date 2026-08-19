@@ -34,11 +34,11 @@ while running:
     else:
         print(strY + ":0" + strX)
 
-    if x >= 59:
-        x = 0
-        y +=1
+    if x <= 0:
+        x = 59
+        y -=1
 
-    if y >= 59:
+    if y <= 0:
         x = 0
         y = 0
 
