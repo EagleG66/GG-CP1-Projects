@@ -38,6 +38,8 @@ while running:
     time.sleep(1)
 """
 
+running = True
+seconds = 0
 
 #math homework
 def multiply(num1,num2):
@@ -45,13 +47,55 @@ def multiply(num1,num2):
     correct_answer = num1 * num2
     str_num1 = str(num1)
     str_num2 = str(num2)
-    answer = input("What is " + str_num1 + " x " + str_num2)
+    answer = int(input("What is " + str_num1 + " x " + str_num2 + " "))
     if answer == correct_answer:
         print("You are correct!")
     else:
         print("You are wrong!")
 
-multiply(2,2)
+def add(num1,num2):
+    global answer
+    correct_answer = num1 + num2
+    str_num1 = str(num1)
+    str_num2 = str(num2)
+    answer = int(input("What is " + str_num1 + " + " + str_num2 + " "))
+    if answer == correct_answer:
+        print("You are correct!")
+    else:
+        print("You are wrong!")
+
+def divide(num1,num2):
+    global answer
+    correct_answer = num1/num2
+    str_num1 = str(num1)
+    str_num2 = str(num2)
+    answer = int(input("What is " + str_num1 + " / " + str_num2 + " "))
+    if answer == correct_answer:
+        print("You are correct!")
+    else:
+        print("You are wrong! The answer is",correct_answer)
+
+def subtract(num1,num2):
+    global answer
+    correct_answer = num1 - num2
+    str_num1 = str(num1)
+    str_num2 = str(num2)
+    answer = int(input("What is " + str_num1 + " - " + str_num2 + " "))
+    if answer == correct_answer:
+        print("You are correct!")
+    else:
+        print("You are wrong! The answer is",correct_answer)
+
+
+
+
+while running:
+
+    multiply(3,3)
+    add(7,9)
+    divide(36,9)
+    subtract(9,4)
+
 
 
     
