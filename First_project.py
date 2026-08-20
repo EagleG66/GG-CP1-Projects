@@ -43,6 +43,8 @@ while running:
 def multiply(num1,num2):
     global answer
     correct_answer = num1 * num2
+    str_num1 = str(num1)
+    str_num2 = str(num2)
     answer = input("What is" + num1 + "x" + num2)
     if answer == correct_answer:
         print("You are correct!")
