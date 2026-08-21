@@ -1,5 +1,6 @@
 #Glenn Gudmunson FIRST PROJECT
 import time
+import random
 
 #TIMER
 """
@@ -40,6 +41,9 @@ while running:
 
 running = True
 seconds = 0
+m1 = random.randint(1,12)
+m2 = random.randint(1,12)
+
 
 #math homework
 def multiply(num1,num2):
