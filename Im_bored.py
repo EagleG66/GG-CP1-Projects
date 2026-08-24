@@ -1,7 +1,7 @@
 #Glenn Gudmunson FIRST PROJECT
 import time
 import random
-
+import keyboard
 #TIMER
 """
 startY = int(input("How many minutes do you want to set the timer for?"))
@@ -127,5 +127,5 @@ else:
 
 """
 
-
+keyboard.is_pressed()
     
