@@ -39,6 +39,8 @@ while running:
     time.sleep(1)
 """
 
+# MATH 
+"""
 running = True
 seconds = 0
 incorrect = False
@@ -123,6 +125,7 @@ if incorrect == False:
 else:
     print("YOU SUCK AT MATH!!!")
 
+"""
 
 
     
