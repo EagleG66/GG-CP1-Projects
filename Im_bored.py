@@ -138,14 +138,56 @@ while True:
 
 # TIC TAC TOE
 
+top_left = None
+top_mid = None
+top_right = None
+mid_right = None
+mid_left = None
+mid_mid = None
+bottom_left = None
+bottom_right = None
+bottom_mid = None
+
+
+
 print("       |       |       ")
-print("       |       |       ")
+print("   1   |   2   |   3   ")
 print("       |       |       ")
 print("-------+-------+-------")
 print("       |       |       ")
-print("       |   O   |       ")
+print("   4   |   5   |   6   ")
 print("       |       |       ")
 print("-------+-------+-------")
 print("       |       |       ")
+print("   7   |   8   |   9   ")
 print("       |       |       ")
-print("       |       |       ")
+
+try:
+    player1_turn = int(input("Choose a spot based on the correlating number from the diagram above"))
+except:
+    print("THAT'S NOT A NUMBER!!!")
+else:
+    if player1_turn < 0 or player1_turn > 9:
+        print("THAT'S NOT AN OPTION!!!")
+    else:
+        break
+
+
+if player1_turn == 1 and top_left == None:
+    top_left = "X"
+if player1_turn == 2 and top_mid == None:
+    top_mid = "X"
+if player1_turn == 3 and top_right == None:
+    top_right = "X"
+if player1_turn == 4 and mid_left == None:
+    mid_left = "X"
+if player1_turn == 5 and mid_mid == None:
+    mid_mid = "X"
+if player1_turn == 6 and mid_right == None:
+    mid_right = "X"
+if player1_turn == 7 and bottom_left == None:
+    bottom_left = "X"
+if player1_turn == 8 and bottom_mid == None:
+    bottom_mid = "X"
+if player1_turn == 9 and bottom_right == None:
+    bottom_right = "X"
