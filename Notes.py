@@ -1,4 +1,6 @@
-# variable notes
+#>>>>>>>>>>>>>>>>>>>VARIABLES<<<<<<<<<<<<<<<<<<<<
+
+# variable types
 
 snake_case = "Type of var name, used for variables"
 
@@ -9,7 +11,7 @@ PascalCase = "Type of var name, used for classes"
 #>>>>>>>>>>DEBUGGING<<<<<<<<<<
 
 # Syntax errors
-print("Wow")
+print("Wow)
 
 # Logic errors
 apples = 20
@@ -27,8 +29,17 @@ while True:
         break
 
 print(fav_num + 5)
-          
-          
+
+
+#>>>>>>>>>>>>>>>SOFTWARE DEVELOPMENT<<<<<<<<<<<<<<
+
+#Steps
+
+requirement_analysis = "Understand what the program needs to be"
+planning_and_design = "Map out the program"
+implementation = "Write the code"
+testing = "Check for errors"
+release_and_maintenance = "Share the program and continue updating it"
 
 
 

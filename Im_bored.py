@@ -127,5 +127,25 @@ else:
 
 """
 
-kb.is_pressed()
-    
+# FAILED ATTEMPT AT KEYBINDING
+"""
+
+while True:
+    if kb.press_and_release(kb.KEY_DOWN):
+        print("WOW")                          
+
+"""
+
+# TIC TAC TOE
+
+print("       |       |       ")
+print("       |       |       ")
+print("       |       |       ")
+print("-------+-------+-------")
+print("       |       |       ")
+print("       |   O   |       ")
+print("       |       |       ")
+print("-------+-------+-------")
+print("       |       |       ")
+print("       |       |       ")
+print("       |       |       ")
