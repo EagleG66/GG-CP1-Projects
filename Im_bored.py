@@ -162,15 +162,16 @@ print("       |       |       ")
 print("   7   |   8   |   9   ")
 print("       |       |       ")
 
-try:
-    player1_turn = int(input("Choose a spot based on the correlating number from the diagram above"))
-except:
-    print("THAT'S NOT A NUMBER!!!")
-else:
-    if player1_turn < 0 or player1_turn > 9:
-        print("THAT'S NOT AN OPTION!!!")
+while True:
+    try:
+        player1_turn = int(input("Choose a spot based on the correlating number from the diagram above"))
+    except:
+        print("THAT'S NOT A NUMBER!!!")
     else:
-        break
+        if player1_turn < 0 or player1_turn > 9:
+            print("THAT'S NOT AN OPTION!!!")
+        else:
+            break
 
 
 if player1_turn == 1 and top_left == None:
