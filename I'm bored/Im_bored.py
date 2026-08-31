@@ -128,16 +128,13 @@ else:
 """
 
 # FAILED ATTEMPT AT KEYBINDING
-"""
 
-while True:
-    if kb.press_and_release(kb.KEY_DOWN):
-        print("WOW")                          
+print("HELLO WORLD")
 
-"""
+
 
 # TIC TAC TOE
-
+"""
 top_left = " "
 top_mid = " "
 top_right = " "
@@ -332,3 +329,5 @@ while game_running:
 
         # DRAW THE BOARD
         gameBoard()
+"""
+        

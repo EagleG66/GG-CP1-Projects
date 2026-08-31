@@ -8,10 +8,10 @@ camelCase = "Type of var name, used for functions"
 
 PascalCase = "Type of var name, used for classes"
 
-#>>>>>>>>>>DEBUGGING<<<<<<<<<<
+#>>>>>>>>>>>>>>>>DEBUGGING<<<<<<<<<<<<<<<<<
 
 # Syntax errors
-print("Wow)
+error = "pritn()"
 
 # Logic errors
 apples = 20
@@ -40,6 +40,19 @@ planning_and_design = "Map out the program"
 implementation = "Write the code"
 testing = "Check for errors"
 release_and_maintenance = "Share the program and continue updating it"
+
+
+#>>>>>>>>>>>>>>>>>INTEGERS/FLOATS<<<<<<<<<<<<<<<<<<<
+
+integer = "A whole number"
+
+float = "Number with a decimal"
+
+modulo = "Returns the remainder of a division problem ===> % "
+
+
+
+
 
 
 
