@@ -20,6 +20,10 @@ people = 3
 print(apples * people)
 
 # Runtime errors
+num = 5
+print(num)
+
+#>>>>>>>>>>>>>>>>>>>>>>>>>>TRY AND EXCEPT<<<<<<<<<<<<<<<<<<<<<<<
 while True:
     try:
         fav_num = int(input("What is ur fav number?"))
@@ -51,9 +55,15 @@ float = "Number with a decimal"
 modulo = "Returns the remainder of a division problem ===> % "
 
 
+# >>>>>>>>>>>>>>>>>>DATA TYPE CONVERSION<<<<<<<<<<<<<<<<<
 
+string = "str(number)"
 
+string = "float(number)"
 
+integer = "int(number)"
+
+round = "round(number, decimal places)"
 
 
 
