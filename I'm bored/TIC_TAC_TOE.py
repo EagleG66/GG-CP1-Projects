@@ -192,3 +192,4 @@ while game_running:
 
         # DRAW THE BOARD
         gameBoard()
+        
