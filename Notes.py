@@ -66,7 +66,30 @@ integer = "int(number)"
 round = "round(number, decimal places)"
 
 
+#>>>>>>>>>>>>>>>>>>STRINGS<<<<<<<<<<<<<<<<<<<<
+
+escape_character = "\"(ignore next character)"
+new_line = "\n"
+tab = "\t"
 
 
-# Vocabulary
+sentence = "The quick brown fox jumps over the lazy dog"
+
+# Find a thing
+print(sentence.find("w"))
+
+print(sentence[0:5])
+
+print(len("supercalifragilisticexpialidocious"))
+
+
+
+
+
+# VOCABULARY
+
 white_space = "indentaion"
+
+string = "collection of any character in quotation marks"
+
+concatenation = "adding something in a string directly after something===> print(integer + float)"
