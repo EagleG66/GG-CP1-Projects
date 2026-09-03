@@ -1,0 +1,4 @@
+
+
+def gameBoard():
+    print("     |     |     |     |     |     |     |     |     |     |     ")
