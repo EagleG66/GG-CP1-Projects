@@ -82,14 +82,62 @@ print(sentence[0:5])
 
 print(len("supercalifragilisticexpialidocious"))
 
+#>>>>>>>>>>>>>>>>>>STRING METHODS<<<<<<<<<<<<<<<
+
+#Note: Methods do not change the string permanently
+
+sentence = "The quick brown fox jumps over the lazy dog"
+
+
+#IDOIT PROOF
+
+# splits up the names into words and then joins them:
+
+first_name = input("WHAT IS YOUR FIRST NAME: ").strip().split()
+
+last_name = input("WHAT IS YOUR LAST NAME: ").strip().split()
+
+full_name = "Hello " + "".join(first_name).title() + " " + "".join(last_name).title()
+
+print(full_name)
+
+print(full_name.isalpha)
+print(full_name.isnumeric)
+print(full_name.isupper)
+
+
+# DOT NOTATION
+
+# lowercase for every character
+print(sentence.lower())
+
+# uppercase for every character
+print(sentence.upper())
+
+# capitalize first word
+print(sentence.capitalize())
+
+# capitalize all words
+print(sentence.title())
+
+# replace x with y
+print(sentence.replace("fox", "wolf"))
+
+# splits the sentence into words
+print(sentence.split())
+
+
+
 
 
 
 
 # VOCABULARY
 
-white_space = "indentaion"
+white_space = "indentaion or empty space"
 
 string = "collection of any character in quotation marks"
 
 concatenation = "adding something in a string directly after something===> print(integer + float)"
+
+index = "Where in the string"
