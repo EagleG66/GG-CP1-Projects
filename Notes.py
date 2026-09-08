@@ -1,4 +1,4 @@
-#>>>>>>>>>>>>>>>>>>>VARIABLES<<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>>VARIABLES<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 # variable types
 
@@ -8,7 +8,7 @@ camelCase = "Type of var name, used for functions"
 
 PascalCase = "Type of var name, used for classes"
 
-#>>>>>>>>>>>>>>>>DEBUGGING<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>DEBUGGING<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 # Syntax errors
 error = "pritn()"
@@ -23,7 +23,7 @@ print(apples * people)
 num = 5
 print(num)
 
-#>>>>>>>>>>>>>>>>>>>>>>>>>>TRY AND EXCEPT<<<<<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>>>>>>>>>TRY AND EXCEPT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 while True:
     try:
         fav_num = int(input("What is ur fav number?"))
@@ -35,7 +35,7 @@ while True:
 print(fav_num + 5)
 
 
-#>>>>>>>>>>>>>>>SOFTWARE DEVELOPMENT<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>SOFTWARE DEVELOPMENT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 #Steps
 
@@ -46,7 +46,7 @@ testing = "Check for errors"
 release_and_maintenance = "Share the program and continue updating it"
 
 
-#>>>>>>>>>>>>>>>>>INTEGERS/FLOATS<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>INTEGERS/FLOATS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 integer = "A whole number"
 
@@ -55,7 +55,7 @@ float = "Number with a decimal"
 modulo = "Returns the remainder of a division problem ===> % "
 
 
-# >>>>>>>>>>>>>>>>>>DATA TYPE CONVERSION<<<<<<<<<<<<<<<<<
+# >>>>>>>>>>>>>>>>>>DATA TYPE CONVERSION<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 string = "str(number)"
 
@@ -66,7 +66,7 @@ integer = "int(number)"
 round = "round(number, decimal places)"
 
 
-#>>>>>>>>>>>>>>>>>>STRINGS<<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>STRINGS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 escape_character = "\"(ignore next character)"
 new_line = "\n"
@@ -82,7 +82,7 @@ print(sentence[0:5])
 
 print(len("supercalifragilisticexpialidocious"))
 
-#>>>>>>>>>>>>>>>>>>STRING METHODS<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>STRING METHODS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 #Note: Methods do not change the string permanently
 
@@ -101,12 +101,22 @@ full_name = "Hello " + "".join(first_name).title() + " " + "".join(last_name).ti
 
 print(full_name)
 
+
+
+#>>>>>>DOT NOTATION<<<<<<<<<<<<<<<<<<
+
+# TRUE OR FALSE OUTPUT
+
+# checks if all is characters
 print(full_name.isalpha)
+
+# checks if all is numbers 
 print(full_name.isnumeric)
+
+# checks if all is uppercase
 print(full_name.isupper)
 
-
-# DOT NOTATION
+#ETCETRA
 
 # lowercase for every character
 print(sentence.lower())
@@ -126,13 +136,31 @@ print(sentence.replace("fox", "wolf"))
 # splits the sentence into words
 print(sentence.split())
 
+# take out white space on either end
+print(sentence.strip())
+
+#>>>>>>>>>>>>>>>F-strings<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+print(f"Hello {full_name}, how are you?")
+
+
+
+letter = input("Give me a letter: ")
+letter = letter[0].lower()
+
+# ORD - changes character to a number
+number_value = ord(letter)
+number_value += 2
+
+# CHR - changes number to a character
+new_letter = chr(number_value)
+print(f"Your letter was {letter} but now it is {new_letter}")
 
 
 
 
 
-
-# VOCABULARY
+#>>>>>>>>>>>>>>>>>>>>VOCABULARY<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 white_space = "indentaion or empty space"
 
@@ -141,3 +169,7 @@ string = "collection of any character in quotation marks"
 concatenation = "adding something in a string directly after something===> print(integer + float)"
 
 index = "Where in the string"
+
+
+
+
