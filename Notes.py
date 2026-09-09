@@ -157,6 +157,20 @@ new_letter = chr(number_value)
 print(f"Your letter was {letter} but now it is {new_letter}")
 
 
+#>>>>>>>>>>>>>>>>>RANDOM<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+import random
+
+# chooses random thing from list
+random_list = ["HI","HELLO","WHAT'S UP"]
+print(random.choice(random_list))
+
+# chooses multiples of two starting with the first number from the range(third argument)
+print(random.randrange(2,10,2))
+
+# float between 0 and 1
+print(random.random())
+
+
 
 
 
