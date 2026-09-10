@@ -15,16 +15,16 @@ while True:
 
 
 if dice_type == "D4":
-    dice_roll = random.randint(1,5)
+    dice_roll = random.randint(1,4)
 elif dice_type == "D6":
-    dice_roll = random.randint(1,7)
+    dice_roll = random.randint(1,6)
 elif dice_type == "D8":
-    dice_roll = random.randint(1,9)
+    dice_roll = random.randint(1,8)
 elif dice_type == "D10":
-    dice_roll = random.randint(1,11)
+    dice_roll = random.randint(1,10)
 elif dice_type == "D12":
-    dice_roll = random.randint(1,13)
+    dice_roll = random.randint(1,12)
 elif dice_type == "D20":
-    dice_roll = random.randint(1,21)
+    dice_roll = random.randint(1,20)
 
 print(f"You rolled a {dice_roll}")
