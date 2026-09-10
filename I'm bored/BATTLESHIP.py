@@ -314,4 +314,4 @@ while True:
     if p1_start:
         input("Have player 2 look away while you set up your ships, and press enter when you are ready.")
         p1GameBoard()
-        two_ship_input = input("You have ")
+        two_ship_input = input("Place your Carrier(5 spaces long) by inputing the first")
