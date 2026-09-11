@@ -266,7 +266,7 @@ def p1GameBoard():
 
 
 def p2GameBoard():
-    print(f"     1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |    10   ")
+    print(f"     1         2         3         4         5         6         7         8         9         10   ")
     print(f"          |         |         |         |         |         |         |         |         |         ")
     print(f"A    {B1}    |    {B2}    |    {B3}    |    {B4}    |    {B5}    |    {B6}    |    {B7}    |    {B8}    |    {B9}    |    {B10}    ")
     print(f"          |         |         |         |         |         |         |         |         |         ")
@@ -314,4 +314,4 @@ while True:
     if p1_start:
         input("Have player 2 look away while you set up your ships, and press enter when you are ready.")
         p1GameBoard()
-        two_ship_input = input("Place your Carrier(5 spaces long) by inputing the first")
+        five_ship_input = input("Place your Carrier(5 spaces long) by inputing the first")
