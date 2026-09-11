@@ -171,6 +171,25 @@ print(random.randrange(2,10,2))
 print(random.random())
 
 
+#>>>>>>>>>>>>>>>PSEUDOCODE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# Note: you must end everything.(if statements, loops, etc.)
+
+get = "gets something from somewhere"
+
+set = "declares a variable"
+
+update = "updates a variable"
+
+end = "end..."
+
+while_ = "repeats a set code until condition is not met"
+
+for_ = "does something for every thing in list"
+
+top_down = "most important to least important"
+
+bottom_up = "one section at a time"
+
 
 
 
@@ -183,6 +202,10 @@ string = "collection of any character in quotation marks"
 concatenation = "adding something in a string directly after something===> print(integer + float)"
 
 index = "Where in the string"
+
+psuedocode = "Write out steps in mostly english for a project"
+
+algorithim = "Steps to complete a task"
 
 
 
