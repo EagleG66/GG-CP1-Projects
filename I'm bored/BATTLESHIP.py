@@ -315,7 +315,14 @@ while True:
         input("Have player 2 look away while you set up your ships, and press enter when you are ready.")
         p1GameBoard()
 
-        five_coordinate = input("Place your Carrier(5 spaces long) by entering the first coordinate: ")
+        while True:
+            try:
+                coordinate = input("Place your Carrier(5 spaces long) by entering the first coordinate: ").title().strip().split()
+                five_coordinate = "".join(coordinate)
+            except:
+                print("That is not an option!!!")
+            else:
+
         five_direction = input("Finish placing your carrier by entering the direction you want it to face(R for right, L for left, U for up, D for down): ")
 
         four_coordinate = input("Place your battleship(4 spaces long) by entering the first coordinate you want it to have: ")

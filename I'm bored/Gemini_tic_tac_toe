@@ -1,0 +1,195 @@
+space1 = " "
+space2 = " "
+space3 = " "
+space4 = " "
+space5 = " "
+space6 = " "
+space7 = " "
+space8 = " "
+space9 = " "
+
+game_over = False
+
+def game_board():
+    print("       |       |       ")
+    print(f"   {space1}   |   {space2}   |   {space3}   ")
+    print("-------+-------+-------")
+    print("       |       |       ")
+    print(f"   {space4}   |   {space5}   |   {space6}   ")
+    print("-------+-------+-------")
+    print("       |       |       ")
+    print(f"   {space7}   |   {space8}   |   {space9}   ")
+
+def win_check():
+    global game_over
+    if space1 == "X" and space2 == "X" and space3 == "X":
+        print("Player 1 WINS!!!")
+        game_over = True
+    elif space4 == "X" and space5 == "X" and space6 == "X":
+        print("Player 1 WINS!!!")
+        game_over = True
+    elif space7 == "X" and space8 == "X" and space9 == "X":
+        print("Player 1 WINS!!!")
+        game_over = True
+    elif space1 == "X" and space4 == "X" and space7 == "X":
+        print("Player 1 WINS!!!")
+        game_over = True
+    elif space2 == "X" and space5 == "X" and space8 == "X":
+        print("Player 1 WINS!!!")
+        game_over = True
+    elif space3 == "X" and space6 == "X" and space9 == "X":
+        print("Player 1 WINS!!!")
+        game_over = True
+    elif space1 == "X" and space5 == "X" and space9 == "X":
+        print("Player 1 WINS!!!")
+        game_over = True
+    elif space3 == "X" and space5 == "X" and space7 == "X":
+        print("Player 1 WINS!!!")
+        game_over = True
+    elif space1 == "O" and space2 == "O" and space3 == "O":
+        print("Player 2 WINS!!!")
+        game_over = True
+    elif space4 == "O" and space5 == "O" and space6 == "O":
+        print("Player 2 WINS!!!")
+        game_over = True
+    elif space7 == "O" and space8 == "O" and space9 == "O":
+        print("Player 2 WINS!!!")
+        game_over = True
+    elif space1 == "O" and space4 == "O" and space7 == "O":
+        print("Player 2 WINS!!!")
+        game_over = True
+    elif space2 == "O" and space5 == "O" and space8 == "O":
+        print("Player 2 WINS!!!")
+        game_over = True
+    elif space3 == "O" and space6 == "O" and space9 == "O":
+        print("Player 2 WINS!!!")
+        game_over = True
+    elif space1 == "O" and space5 == "O" and space9 == "O":
+        print("Player 2 WINS!!!")
+        game_over = True
+    elif space3 == "O" and space5 == "O" and space7 == "O":
+        print("Player 2 WINS!!!")
+        game_over = True
+    elif space1 != " " and space2 != " " and space3 != " " and space4 != " " and space5 != " " and space6 != " " and space7 != " " and space8 != " " and space9 != " ":
+        print("GAME OVER!!!")
+        game_over = True
+
+def get_player_input(player_name):
+    while True:
+        raw_input = input(f"Which space does {player_name} want? (1-9): ")
+        # Using string methods .strip() to clean spaces and .isdigit() to check if it's a number
+        cleaned_input = raw_input.strip()
+        
+        if cleaned_input.isdigit() and 1 <= int(cleaned_input) <= 9:
+            return cleaned_input
+        else:
+            print("INVALID INPUT! Please enter a single digit between 1 and 9.")
+
+while not game_over:
+    game_board()
+
+    # Player 1 Turn
+    user_input = get_player_input("Player 1")
+
+    if user_input == "1":
+        if space1 == " ":
+            space1 = "X"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+    elif user_input == "2":
+        if space2 == " ":
+            space2 = "X"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+    elif user_input == "3":
+        if space3 == " ":
+            space3 = "X"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+    elif user_input == "4":
+        if space4 == " ":
+            space4 = "X"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+    elif user_input == "5":
+        if space5 == " ":
+            space5 = "X"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+    elif user_input == "6":
+        if space6 == " ":
+            space6 = "X"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+    elif user_input == "7":
+        if space7 == " ":
+            space7 = "X"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+    elif user_input == "8":
+        if space8 == " ":
+            space8 = "X"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+    elif user_input == "9":
+        if space9 == " ":
+            space9 = "X"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+
+    win_check()
+    if game_over:
+        break
+
+    game_board()
+
+    # Player 2 Turn
+    user_input = get_player_input("Player 2")
+
+    if user_input == "1":
+        if space1 == " ":
+            space1 = "O"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+    elif user_input == "2":
+        if space2 == " ":
+            space2 = "O"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+    elif user_input == "3":
+        if space3 == " ":
+            space3 = "O"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+    elif user_input == "4":
+        if space4 == " ":
+            space4 = "O"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+    elif user_input == "5":
+        if space5 == " ":
+            space5 = "O"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+    elif user_input == "6":
+        if space6 == " ":
+            space6 = "O"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+    elif user_input == "7":
+        if space7 == " ":
+            space7 = "O"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+    elif user_input == "8":
+        if space8 == " ":
+            space8 = "O"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+    elif user_input == "9":
+        if space9 == " ":
+            space9 = "O"
+        else:
+            print("YOU FORFEIT YOUR TURN FOR CHOOSING A SPACE THAT WAS ALREADY TAKEN!!!")
+
+    win_check()
