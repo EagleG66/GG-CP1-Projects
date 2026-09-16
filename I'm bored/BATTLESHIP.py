@@ -317,11 +317,17 @@ while True:
 
         while True:
             try:
-                coordinate = input("Place your Carrier(5 spaces long) by entering the first coordinate: ").title().strip().split()
-                five_coordinate = "".join(coordinate)
+                coordinate = input("Place your Carrier(5 spaces long) by entering the first coordinate(example: C3): ").title().strip().split()
+                five_row_value = ord(coordinate[0])
+                five_column = coordinate[1]
+
             except:
                 print("That is not an option!!!")
             else:
+                if len(coordinate) >= 2 and len(coordinate) <= 3 and five_column >= 1 and five_column <= 10 and five_row_value >= 65 and five_row_value <= 74:
+                    break
+                else:
+                    print("THAT'S NOT AN OPTION!!!")
 
         five_direction = input("Finish placing your carrier by entering the direction you want it to face(R for right, L for left, U for up, D for down): ")
 

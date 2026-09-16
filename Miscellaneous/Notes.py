@@ -1,3 +1,4 @@
+
 #>>>>>>>>>>>>>>>>>>>VARIABLES<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 # variable types
@@ -189,6 +190,38 @@ for_ = "does something for every thing in list"
 top_down = "most important to least important"
 
 bottom_up = "one section at a time"
+
+
+
+#>>>>>>>>>>>>>>>>>>>>>DEBUGGER<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# Note: add a breakpoint every time
+
+grades = [85, 90, 78, 92, 88]
+
+total = 0
+count = len(grades)
+
+for grade in grades:
+    total += grade
+
+avg = total/count
+
+print(f"The avg grade is {avg}")
+
+continue_ = "continue the code"
+
+step_over = "run this line but stop on the next one"
+
+step_in = "go into the function"
+
+step_out = "go out of the function" 
+
+restart = "restart the debugger"
+
+end = "stop the debugger"
+
+the_watch = "You can put an if statement in it and it will return a boolean"
+
 
 
 
