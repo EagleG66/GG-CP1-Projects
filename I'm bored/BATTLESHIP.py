@@ -319,7 +319,8 @@ while True:
             try:
                 coordinate = input("Place your Carrier(5 spaces long) by entering the first coordinate(example: C3): ").title().strip().split()
                 five_row_value = ord(coordinate[0])
-                five_column = coordinate[1]
+                rlist = [coordinate[1], coordinate[2]]
+                five_column = "".join(rlist)
 
             except:
                 print("That is not an option!!!")
