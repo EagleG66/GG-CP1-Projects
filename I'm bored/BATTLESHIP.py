@@ -317,15 +317,22 @@ while True:
 
         while True:
             try:
-                coordinate = input("Place your Carrier(5 spaces long) by entering the first coordinate(example: C3): ").title().strip().split()
-                five_row_value = ord(coordinate[0])
-                rlist = [coordinate[1], coordinate[2]]
-                five_column = "".join(rlist)
+                coordinate = input("Place your Carrier(5 spaces long) by entering the first coordinate(example: C3): ").title().strip()
+                coordinates_list = list(coordinate)
+                five_row_value = ord(coordinates_list[0])
+
+                if len(coordinates_list) <= 3:
+                    rlist = [coordinates_list[1], coordinates_list[2]]
+                    five_column = "".join(rlist)
+                else:
+                    five_column = [coordinates_list[1]]
+                
+                five_column_num = int(five_column)
 
             except:
                 print("That is not an option!!!")
             else:
-                if len(coordinate) >= 2 and len(coordinate) <= 3 and five_column >= 1 and five_column <= 10 and five_row_value >= 65 and five_row_value <= 74:
+                if len(coordinate) >= 2 and len(coordinate) <= 3 and five_column_num >= 1 and five_column_num <= 10 and five_row_value >= 65 and five_row_value <= 74:
                     break
                 else:
                     print("THAT'S NOT AN OPTION!!!")
