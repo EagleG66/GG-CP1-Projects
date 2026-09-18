@@ -221,7 +221,7 @@ p2_start = False
 
 
 
-def gameBoardP2():
+def p1GameBoard():
     print(f"     1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |    10   ")
     print(f"          |         |         |         |         |         |         |         |         |         ")
     print(f"A    {A1}    |    {A2}    |    {A3}    |    {A4}    |    {A5}    |    {A6}    |    {A7}    |    {A8}    |    {A9}    |    {A10}    ")
@@ -265,7 +265,7 @@ def gameBoardP2():
 
 
 
-def gameBoardP2():
+def p2GameBoard():
     print(f"     1         2         3         4         5         6         7         8         9         10   ")
     print(f"          |         |         |         |         |         |         |         |         |         ")
     print(f"A    {B1}    |    {B2}    |    {B3}    |    {B4}    |    {B5}    |    {B6}    |    {B7}    |    {B8}    |    {B9}    |    {B10}    ")
@@ -308,38 +308,35 @@ def gameBoardP2():
     print(f"          |         |         |         |         |         |         |         |         |         ")
 
 
-def placeShipsP1():
-    
-    input("Have player 2 look away while you set up your ships, and press enter when you are ready.")
+
+while True:
+    if p1_start:
+        input("Have player 2 look away while you set up your ships, and press enter when you are ready.")
+        p1GameBoard()
 
         while True:
             try:
-                coordinate = input("Place your Carrier(5 spaces long) by entering the first coordinate(example: A1): ").title().strip()
+                coordinate = input("Place your Carrier(5 spaces long) by entering the first coordinate(example: C3): ").title().strip()
                 coordinates_list = list(coordinate)
-                row_value = ord(coordinates_list[0])
+                five_row_value = ord(coordinates_list[0])
 
                 if len(coordinates_list) <= 3:
                     rlist = [coordinates_list[1], coordinates_list[2]]
-                    column = "".join(rlist)
+                    five_column = "".join(rlist)
                 else:
-                    column = coordinates_list[1]
+                    five_column = coordinates_list[1]
                 
-                column_num = int(column)
+                five_column_num = int(five_column)
 
             except:
                 print("That is not an option!!!")
             else:
-                if len(coordinate) >= 2 and len(coordinate) <= 3 and column_num >= 1 and column_num <= 10 and row_value >= 65 and row_value <= 74:
+                if len(coordinate) >= 2 and len(coordinate) <= 3 and five_column_num >= 1 and five_column_num <= 10 and five_row_value >= 65 and five_row_value <= 74:
                     break
                 else:
                     print("THAT'S NOT AN OPTION!!!")
 
         five_direction = input("Finish placing your carrier by entering the direction you want it to face(R for right, L for left, U for up, D for down): ")
 
-
-while True:
-
-    if p1_start:
-        gameBoardP1
-        placeShipsP1()
-        
+        four_coordinate = input("Place your battleship(4 spaces long) by entering the first coordinate you want it to have: ")
+        four_direction = input("Finish placing your carrier by entering the direction you want it to face(R for right, L for left, U for up, D for down): ")
