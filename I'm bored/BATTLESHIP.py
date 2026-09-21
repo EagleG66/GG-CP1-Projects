@@ -314,6 +314,7 @@ while True:
         input("Have player 2 look away while you set up your ships, and press enter when you are ready.")
         p1GameBoard()
 
+        # First coordinate (five long)
         while True:
             try:
                 coordinate = input("Place your Carrier(5 spaces long) by entering the first coordinate(example: C3): ").title().strip()
@@ -332,11 +333,33 @@ while True:
                 print("That is not an option!!!")
             else:
                 if len(coordinate) >= 2 and len(coordinate) <= 3 and five_column_num >= 1 and five_column_num <= 10 and five_row_value >= 65 and five_row_value <= 74:
+                    five_row_value -= 65
+                    five_row_value = five_row_value * 10
+                    five_start_coord = five_row_value + five_column_num
                     break
                 else:
                     print("THAT'S NOT AN OPTION!!!")
 
-        five_direction = input("Finish placing your carrier by entering the direction you want it to face(R for right, L for left, U for up, D for down): ")
-
-        four_coordinate = input("Place your battleship(4 spaces long) by entering the first coordinate you want it to have: ")
-        four_direction = input("Finish placing your carrier by entering the direction you want it to face(R for right, L for left, U for up, D for down): ")
+        while True:
+            try:
+                five_direction = input("Finish placing your carrier by entering the direction you want it to face(R for right, L for left, U for up, D for down): ")
+            except:
+                print("THAT'S NOT AN OPTION!!!")
+            else:
+                if five_direction == "R":
+                    five_end_coord = five_row_value + five_column_num + 5
+                    break
+                elif five_direction == "L":
+                    five_end_coord = five_row_value + five_column_num - 5
+                    break
+                elif five_direction == "D":
+                    five_end_coord = five_row_value + five_column_num + 50
+                    break
+                elif five_direction == "u":
+                    five_end_coord = five_row_value + five_column_num - 50
+                    break
+                else:
+                    print("THAT'S NOT AN OPTION!!!")
+        
+        print(five_start_coord)
+        print(five_end_coord)
