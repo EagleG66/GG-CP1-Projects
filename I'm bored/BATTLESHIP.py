@@ -320,7 +320,7 @@ while True:
                 coordinates_list = list(coordinate)
                 five_row_value = ord(coordinates_list[0])
 
-                if len(coordinates_list) <= 3:
+                if len(coordinates_list) == 3:
                     rlist = [coordinates_list[1], coordinates_list[2]]
                     five_column = "".join(rlist)
                 else:
