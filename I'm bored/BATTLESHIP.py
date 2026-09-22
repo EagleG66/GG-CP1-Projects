@@ -351,7 +351,7 @@ while True:
                     five_end_coord = five_row_value + five_column_num + 4
                     five_start_list = list(str(five_start_coord))
                     five_end_list = list(str(five_end_coord))
-                    if len(five)
+                    
                     if five_end_list[0] == five_start_list[0]:
                         break
                     else:
@@ -382,5 +382,10 @@ while True:
                         print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
                 else:
                     print("THAT'S NOT AN OPTION!!!")
+
+
+
+
+                    """YOU MUST FIX THE FACT THAT THE FIRST ROW ONLY HAS ONE DIGIT SO THERE IS A RUNTIME ERROR!!!"""
         
 
