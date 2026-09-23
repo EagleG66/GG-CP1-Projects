@@ -394,29 +394,59 @@ while True:
                         break
                     else:
                         print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
-                        
+
                 elif five_direction == "D":
                     five_end_coord = five_row_value + five_column_num + 40
                     five_start_list = list(str(five_start_coord))
                     five_end_list = list(str(five_end_coord))
-                    if five_end_list[1] == five_start_list[1]:
+
+                    if len(five_start_list) == 1 and len(five_end_list) == 1:
+                        five_start_num = five_start_list[0]
+                        five_end_num = five_end_list[0]
+                    elif len(five_start_list) == 1 and len(five_end_list) == 2:
+                        five_start_num = five_start_list[0]
+                        five_end_num = five_end_list[1]
+                    elif len(five_start_list) == 1 and len(five_end_list) == 2:
+                        five_start_num = five_start_list[1]
+                        five_end_num = five_end_list[0]
+                    elif len(five_start_list) == 2 and len(five_end_list) == 2:
+                        five_start_num = five_start_list[1]
+                        five_end_num = five_end_list[1]
+
+
+                    if five_end_num == five_start_num:
                         break
                     else:
                         print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
+                        
                 elif five_direction == "U":
                     five_end_coord = five_row_value + five_column_num - 40
                     five_start_list = list(str(five_start_coord))
                     five_end_list = list(str(five_end_coord))
-                    if five_end_list[1] == five_start_list[1]:
+                    
+                    if len(five_start_list) == 1 and len(five_end_list) == 1:
+                        five_start_num = five_start_list[0]
+                        five_end_num = five_end_list[0]
+                    elif len(five_start_list) == 1 and len(five_end_list) == 2:
+                        five_start_num = five_start_list[0]
+                        five_end_num = five_end_list[1]
+                    elif len(five_start_list) == 1 and len(five_end_list) == 2:
+                        five_start_num = five_start_list[1]
+                        five_end_num = five_end_list[0]
+                    elif len(five_start_list) == 2 and len(five_end_list) == 2:
+                        five_start_num = five_start_list[1]
+                        five_end_num = five_end_list[1]
+
+
+                    if five_end_num == five_start_num:
                         break
                     else:
                         print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
+                        
                 else:
                     print("THAT'S NOT AN OPTION!!!")
 
 
-
-
-                    """YOU MUST FIX THE FACT THAT THE FIRST ROW ONLY HAS ONE DIGIT SO THERE IS A RUNTIME ERROR!!!"""
+"""DEBUGGGGGGGG"""
         
 
