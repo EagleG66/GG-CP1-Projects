@@ -222,7 +222,7 @@ p2_start = False
 
 
 def p1GameBoard():
-    print(f"     1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |    10   ")
+    print(f"     1         2         3         4         5         6         7         8         9         10   ")
     print(f"          |         |         |         |         |         |         |         |         |         ")
     print(f"A    {A1}    |    {A2}    |    {A3}    |    {A4}    |    {A5}    |    {A6}    |    {A7}    |    {A8}    |    {A9}    |    {A10}    ")
     print(f"          |         |         |         |         |         |         |         |         |         ")
@@ -307,146 +307,127 @@ def p2GameBoard():
     print(f"J    {B91}    |    {B92}    |    {B93}    |    {B94}    |    {B95}    |    {B96}    |    {B97}    |    {B98}    |    {B99}    |    {B100}    ")
     print(f"          |         |         |         |         |         |         |         |         |         ")
 
+def place_ship(length, player):
+
+    while True:
+        try:
+            coordinate = input("Place your Carrier(5 spaces long) by entering the first coordinate(example: C3): ").title().strip()
+            coordinates_list = list(coordinate)
+            five_row_value = ord(coordinates_list[0])
+
+            if len(coordinates_list) == 3:
+                rlist = [coordinates_list[1], coordinates_list[2]]
+                five_column = "".join(rlist)
+            else:
+                five_column = coordinates_list[1]
+            
+            five_column_num = int(five_column)
+
+        except:
+            print("That is not an option!!!")
+        else:
+            if len(coordinate) >= 2 and len(coordinate) <= 3 and five_column_num >= 1 and five_column_num <= 10 and five_row_value >= 65 and five_row_value <= 74:
+                five_row_value -= 65
+                five_row_value = five_row_value * 10
+                five_start_coord = five_row_value + five_column_num
+                break
+            else:
+                print("THAT'S NOT AN OPTION!!!")
+
+    # End coordinate (five long)
+    while True:
+        try:
+            five_direction = input("Finish placing your carrier by entering the direction you want it to face(R for right, L for left, U for up, D for down): ").strip().capitalize()
+        except:
+            print("THAT'S NOT AN OPTION!!!")
+        else:
+
+            #RIGHT
+
+            if five_direction == "R":
+                five_end_coord = five_row_value + five_column_num + 4
+                five_start_list = list(str(five_start_coord))
+                five_end_list = list(str(five_end_coord))
+
+                if len(five_start_list) == 1 and len(five_end_list) == 1:
+                    five_start_num = 0
+                    five_end_num = 0
+                elif len(five_start_list) == 1 and len(five_end_list) == 2:
+                    five_start_num = 0
+                    five_end_num = five_end_list[0]
+                elif len(five_start_list) == 1 and len(five_end_list) == 2:
+                    five_start_num = five_start_list[0]
+                    five_end_num = 0
+                elif len(five_start_list) == 2 and len(five_end_list) == 2:
+                    five_start_num = five_start_list[0]
+                    five_end_num = five_end_list[0]
+
+
+                if five_end_num == five_start_num:
+                    five_start_coords = [five_start_coord, five_start_coord + 1, five_start_coord + 2, five_start_coord + 3, five_start_coord + 4]
+                    break
+                else:
+                    print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
+
+            #LEFT
+
+            elif five_direction == "L":
+                five_end_coord = five_row_value + five_column_num - 4
+                five_start_list = list(str(five_start_coord))
+                five_end_list = list(str(five_end_coord))
+
+                if len(five_start_list) == 1 and len(five_end_list) == 1:
+                    five_start_num = 0
+                    five_end_num = 0
+                elif len(five_start_list) == 1 and len(five_end_list) == 2:
+                    five_start_num = 0
+                    five_end_num = five_end_list[0]
+                elif len(five_start_list) == 1 and len(five_end_list) == 2:
+                    five_start_num = five_start_list[0]
+                    five_end_num = 0
+                elif len(five_start_list) == 2 and len(five_end_list) == 2:
+                    five_start_num = five_start_list[0]
+                    five_end_num = five_end_list[0]
+
+
+                if five_end_num == five_start_num:
+                    five_start_coords = [five_end_coord, five_end_coord + 1, five_end_coord + 2, five_end_coord + 3, five_end_coord + 4]
+                    break
+                else:
+                    print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
+            
+            #DOWN
+
+            elif five_direction == "D":
+                five_end_coord = five_row_value + five_column_num + 40
+                
+                if five_end_coord > 100 or five_end_coord < 0:
+                    print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
+                else:
+                    five_start_coords = [five_start_coord, five_start_coord - 10, five_start_coord - 20, five_start_coord - 30, five_start_coord - 40]
+                    break
+                    
+            #UP
+
+            elif five_direction == "U":
+                five_end_coord = five_row_value + five_column_num - 40
+                
+                if five_end_coord > 100 or five_end_coord < 0:
+                    print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
+                else:
+                    five_start_coords = [five_start_coord, five_start_coord + 10, five_start_coord + 20, five_start_coord + 30, five_start_coord + 40]
+                    break
+                    
+            else:
+                print("THAT'S NOT AN OPTION!!!")
+
+
 
 
 while True:
     if p1_start:
         input("Have player 2 look away while you set up your ships, and press enter when you are ready.")
         p1GameBoard()
-
-        # First coordinate (five long)
-        while True:
-            try:
-                coordinate = input("Place your Carrier(5 spaces long) by entering the first coordinate(example: C3): ").title().strip()
-                coordinates_list = list(coordinate)
-                five_row_value = ord(coordinates_list[0])
-
-                if len(coordinates_list) == 3:
-                    rlist = [coordinates_list[1], coordinates_list[2]]
-                    five_column = "".join(rlist)
-                else:
-                    five_column = coordinates_list[1]
-                
-                five_column_num = int(five_column)
-
-            except:
-                print("That is not an option!!!")
-            else:
-                if len(coordinate) >= 2 and len(coordinate) <= 3 and five_column_num >= 1 and five_column_num <= 10 and five_row_value >= 65 and five_row_value <= 74:
-                    five_row_value -= 65
-                    five_row_value = five_row_value * 10
-                    five_start_coord = five_row_value + five_column_num
-                    break
-                else:
-                    print("THAT'S NOT AN OPTION!!!")
-
-        # End coordinate (five long)
-        while True:
-            try:
-                five_direction = input("Finish placing your carrier by entering the direction you want it to face(R for right, L for left, U for up, D for down): ").strip().capitalize()
-            except:
-                print("THAT'S NOT AN OPTION!!!")
-            else:
-                if five_direction == "R":
-                    five_end_coord = five_row_value + five_column_num + 4
-                    five_start_list = list(str(five_start_coord))
-                    five_end_list = list(str(five_end_coord))
-
-                    if len(five_start_list) == 1 and len(five_end_list) == 1:
-                        five_start_num = 0
-                        five_end_num = 0
-                    elif len(five_start_list) == 1 and len(five_end_list) == 2:
-                        five_start_num = 0
-                        five_end_num = five_end_list[0]
-                    elif len(five_start_list) == 1 and len(five_end_list) == 2:
-                        five_start_num = five_start_list[0]
-                        five_end_num = 0
-                    elif len(five_start_list) == 2 and len(five_end_list) == 2:
-                        five_start_num = five_start_list[0]
-                        five_end_num = five_end_list[0]
-
-
-                    if five_end_num == five_start_num:
-                        break
-                    else:
-                        print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
-
-                elif five_direction == "L":
-                    five_end_coord = five_row_value + five_column_num - 4
-                    five_start_list = list(str(five_start_coord))
-                    five_end_list = list(str(five_end_coord))
-
-                    if len(five_start_list) == 1 and len(five_end_list) == 1:
-                        five_start_num = 0
-                        five_end_num = 0
-                    elif len(five_start_list) == 1 and len(five_end_list) == 2:
-                        five_start_num = 0
-                        five_end_num = five_end_list[0]
-                    elif len(five_start_list) == 1 and len(five_end_list) == 2:
-                        five_start_num = five_start_list[0]
-                        five_end_num = 0
-                    elif len(five_start_list) == 2 and len(five_end_list) == 2:
-                        five_start_num = five_start_list[0]
-                        five_end_num = five_end_list[0]
-
-
-                    if five_end_num == five_start_num:
-                        break
-                    else:
-                        print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
-
-                elif five_direction == "D":
-                    five_end_coord = five_row_value + five_column_num + 40
-                    five_start_list = list(str(five_start_coord))
-                    five_end_list = list(str(five_end_coord))
-
-                    if len(five_start_list) == 1 and len(five_end_list) == 1:
-                        five_start_num = five_start_list[0]
-                        five_end_num = five_end_list[0]
-                    elif len(five_start_list) == 1 and len(five_end_list) == 2:
-                        five_start_num = five_start_list[0]
-                        five_end_num = five_end_list[1]
-                    elif len(five_start_list) == 1 and len(five_end_list) == 2:
-                        five_start_num = five_start_list[1]
-                        five_end_num = five_end_list[0]
-                    elif len(five_start_list) == 2 and len(five_end_list) == 2:
-                        five_start_num = five_start_list[1]
-                        five_end_num = five_end_list[1]
-
-
-                    if five_end_num == five_start_num:
-                        break
-                    else:
-                        print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
-                        
-                elif five_direction == "U":
-                    five_end_coord = five_row_value + five_column_num - 40
-                    five_start_list = list(str(five_start_coord))
-                    five_end_list = list(str(five_end_coord))
-                    
-                    if len(five_start_list) == 1 and len(five_end_list) == 1:
-                        five_start_num = five_start_list[0]
-                        five_end_num = five_end_list[0]
-                    elif len(five_start_list) == 1 and len(five_end_list) == 2:
-                        five_start_num = five_start_list[0]
-                        five_end_num = five_end_list[1]
-                    elif len(five_start_list) == 1 and len(five_end_list) == 2:
-                        five_start_num = five_start_list[1]
-                        five_end_num = five_end_list[0]
-                    elif len(five_start_list) == 2 and len(five_end_list) == 2:
-                        five_start_num = five_start_list[1]
-                        five_end_num = five_end_list[1]
-
-
-                    if five_end_num == five_start_num:
-                        break
-                    else:
-                        print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
-                        
-                else:
-                    print("THAT'S NOT AN OPTION!!!")
-
-
-"""DEBUGGGGGGGG"""
+        place_ship(5,1)
         
 
