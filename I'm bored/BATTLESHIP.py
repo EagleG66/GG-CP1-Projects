@@ -167,7 +167,7 @@ def place_ship(length, player):
 
 
                 if end_num == start_num:
-                    if player == 1:
+                    if player == 1 and start_coord is not in p1_ship_coords and start_coord + 1 is not in p1_ship_coords and start_coord + 2 is not in p1_ship_coords and start_coord + 3 is not in p1_ship_coords and start_coord + 4 is not in p1_ship_coords:
                         p1_ship_coords.append(start_coord)
                         p1_ship_coords.append(start_coord + 1)
                         if length > 2:
@@ -176,7 +176,8 @@ def place_ship(length, player):
                             p1_ship_coords.append(start_coord + 3)
                         if length > 4:
                             p1_ship_coords.append(start_coord + 4)
-                    elif player == 2:
+                        break
+                    elif player == 2 and start_coord is not in p2_ship_coords and start_coord + 1 is not in p2_ship_coords and start_coord + 2 is not in p2_ship_coords and start_coord + 3 is not in p2_ship_coords and start_coord + 4 is not in p2_ship_coords:
                         p2_ship_coords.append(start_coord)
                         p2_ship_coords.append(start_coord + 1)
                         if length > 2:
@@ -185,7 +186,9 @@ def place_ship(length, player):
                             p2_ship_coords.append(start_coord + 3)
                         if length > 4:
                             p2_ship_coords.append(start_coord + 4)
-                    break
+                        break
+                    else:
+                        print("You have softlocked yourself... Please restart the program.")
                 else:
                     print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
 
@@ -211,7 +214,7 @@ def place_ship(length, player):
 
 
                 if end_num == start_num:
-                    if player == 1:
+                    if player == 1 and end_coord is not in p1_ship_coords and end_coord + 1 is not in p1_ship_coords and end_coord + 2 is not in p1_ship_coords and end_coord + 3 is not in p1_ship_coords and end_coord + 4 is not in p1_ship_coords:
                         p1_ship_coords.append(end_coord)
                         p1_ship_coords.append(end_coord + 1)
                         if length > 2:
@@ -220,7 +223,8 @@ def place_ship(length, player):
                             p1_ship_coords.append(end_coord + 3)
                         if length > 4:
                             p1_ship_coords.append(end_coord + 4)
-                    elif player == 2:
+                        break
+                    elif player == 2 and end_coord is not in p2_ship_coords and end_coord + 1 is not in p2_ship_coords and end_coord + 2 is not in p2_ship_coords and end_coord + 3 is not in p2_ship_coords and end_coord + 4 is not in p2_ship_coords:
                         p2_ship_coords.append(end_coord)
                         p2_ship_coords.append(end_coord + 1)
                         if length > 2:
@@ -229,7 +233,9 @@ def place_ship(length, player):
                             p2_ship_coords.append(end_coord + 3)
                         if length > 4:
                             p2_ship_coords.append(end_coord + 4)
-                    break
+                        break
+                    else:
+                        print("You have softlocked yourself... Please restart the program.")
                 else:
                     print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
             
@@ -306,4 +312,4 @@ while True:
         place_ship(2,1)
         
 
-# Your ships will collide so you must make it so they won't be able to put two ships in the same place...
+# Repeat the things you did to LEFT and RIGHT and do it to UP and DOWN. Also, do not forget to sync the changes before you begin.
