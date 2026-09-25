@@ -1,8 +1,10 @@
 #GLENN GUDMUNSON user signin
 
+#credentials
 username = "EagleG66"
 password = "123456789"
 
+# credentials check
 while True:
         
     username_input = input("What is your username: ")
