@@ -307,11 +307,11 @@ def p2GameBoard():
     print(f"J    {B91}    |    {B92}    |    {B93}    |    {B94}    |    {B95}    |    {B96}    |    {B97}    |    {B98}    |    {B99}    |    {B100}    ")
     print(f"          |         |         |         |         |         |         |         |         |         ")
 
-def place_ship(length, player):
+def place_ship(int(length), int(player)):
 
     while True:
         try:
-            coordinate = input("Place your Carrier(5 spaces long) by entering the first coordinate(example: C3): ").title().strip()
+            coordinate = input(f"Place your Carrier({length} spaces long) by entering the first coordinate(example: C3): ").title().strip()
             coordinates_list = list(coordinate)
             five_row_value = ord(coordinates_list[0])
 
