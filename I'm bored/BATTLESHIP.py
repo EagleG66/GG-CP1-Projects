@@ -167,7 +167,7 @@ def place_ship(length, player):
 
 
                 if end_num == start_num:
-                    if player == 1 and (start_coord is not in p1_ship_coords and start_coord + 1 is not in p1_ship_coords and start_coord + 2 is not in p1_ship_coords and start_coord + 3 is not in p1_ship_coords and start_coord + 4 is not in p1_ship_coords and length == 5) or (start_coord is not in p1_ship_coords and start_coord + 1 is not in p1_ship_coords and start_coord + 2 is not in p1_ship_coords and start_coord + 3 is not in p1_ship_coords and length == 4):
+                    if player == 1 and (start_coord is not in p1_ship_coords and start_coord + 1 is not in p1_ship_coords and start_coord + 2 is not in p1_ship_coords and start_coord + 3 is not in p1_ship_coords and start_coord + 4 is not in p1_ship_coords and length == 5) or (start_coord is not in p1_ship_coords and start_coord + 1 is not in p1_ship_coords and start_coord + 2 is not in p1_ship_coords and start_coord + 3 is not in p1_ship_coords and length == 4) or (start_coord is not in p1_ship_coords and start_coord + 1 is not in p1_ship_coords and start_coord + 2 is not in p1_ship_coords and length == 3) or (start_coord is not in p1_ship_coords and start_coord + 1 is not in p1_ship_coords and length == 2):
                         p1_ship_coords.append(start_coord)
                         p1_ship_coords.append(start_coord + 1)
                         if length > 2:
@@ -312,4 +312,4 @@ while True:
         place_ship(2,1)
         
 
-# Repeat the things you did to LEFT and RIGHT and do it to UP and DOWN. Also, do not forget to sync the changes before you begin.
+# Repeat
