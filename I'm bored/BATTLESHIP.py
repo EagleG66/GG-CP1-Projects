@@ -167,7 +167,7 @@ def place_ship(length, player):
 
 
                 if end_num == start_num:
-                    if player == 1 and start_coord is not in p1_ship_coords and start_coord + 1 is not in p1_ship_coords and start_coord + 2 is not in p1_ship_coords and start_coord + 3 is not in p1_ship_coords and start_coord + 4 is not in p1_ship_coords:
+                    if player == 1 and (start_coord is not in p1_ship_coords and start_coord + 1 is not in p1_ship_coords and start_coord + 2 is not in p1_ship_coords and start_coord + 3 is not in p1_ship_coords and start_coord + 4 is not in p1_ship_coords and length == 5) or (start_coord is not in p1_ship_coords and start_coord + 1 is not in p1_ship_coords and start_coord + 2 is not in p1_ship_coords and start_coord + 3 is not in p1_ship_coords and length == 4):
                         p1_ship_coords.append(start_coord)
                         p1_ship_coords.append(start_coord + 1)
                         if length > 2:
@@ -247,7 +247,7 @@ def place_ship(length, player):
                 if end_coord > 100 or end_coord < 0:
                     print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
                 else:
-                    if player == 1:
+                    if player == 1 and end_coord is not in p1_ship_coords and end_coord - 10 is not in p1_ship_coords and end_coord - 20 is not in p1_ship_coords and end_coord - 30 is not in p1_ship_coords and end_coord - 40 is not in p1_ship_coords:
                         p1_ship_coords.append(start_coord)
                         p1_ship_coords.append(start_coord - 10)
                         if length > 2:
@@ -275,7 +275,7 @@ def place_ship(length, player):
                 if end_coord > 100 or end_coord < 0:
                     print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
                 else:
-                    if player == 1:
+                    if player == 1 and end_coord is not in p1_ship_coords and end_coord + 10 is not in p1_ship_coords and end_coord + 20 is not in p1_ship_coords and end_coord + 30 is not in p1_ship_coords and end_coord + 40 is not in p1_ship_coords:
                         p1_ship_coords.append(start_coord)
                         p1_ship_coords.append(start_coord + 10)
                         if length > 2:
