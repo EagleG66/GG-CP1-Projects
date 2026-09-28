@@ -114,7 +114,7 @@ def place_ship(length, player):
 
     while True:
         try:
-            coordinate = input(f"Place your Carrier({length} spaces long) by entering the first coordinate(example: C3): ").title().strip()
+            coordinate = input(f"Place your ship({length} spaces long) by entering the first coordinate(example: C3): ").title().strip()
             coordinates_list = list(coordinate)
             row_value = ord(coordinates_list[0])
 
@@ -140,7 +140,7 @@ def place_ship(length, player):
     # End coordinate (five long)
     while True:
         try:
-            direction = input("Finish placing your carrier by entering the direction you want it to face(R for right, L for left, U for up, D for down): ").strip().capitalize()
+            direction = input("Finish placing your ship by entering the direction you want it to face(R for right, L for left, U for up, D for down): ").strip().capitalize()
         except:
             print("THAT'S NOT AN OPTION!!!")
         else:
