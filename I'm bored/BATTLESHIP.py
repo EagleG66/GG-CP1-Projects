@@ -67,7 +67,7 @@ def p1GameBoard():
 
 
 
-def p1GameBoard():
+def p2GameBoard():
     print(f"     1         2         3         4         5         6         7         8         9         10   ")
     print(f"          |         |         |         |         |         |         |         |         |         ")
     print(f"A    {B[1]}    |    {B[2]}    |    {B[3]}    |    {B[4]}    |    {B[5]}    |    {B[6]}    |    {B[7]}    |    {B[8]}    |    {B[9]}    |    {B[10]}    ")
@@ -167,7 +167,7 @@ def place_ship(length, player):
 
 
                 if end_num == start_num:
-                    if player == 1 and (start_coord is not in p1_ship_coords and start_coord + 1 is not in p1_ship_coords and start_coord + 2 is not in p1_ship_coords and start_coord + 3 is not in p1_ship_coords and start_coord + 4 is not in p1_ship_coords and length == 5) or (start_coord is not in p1_ship_coords and start_coord + 1 is not in p1_ship_coords and start_coord + 2 is not in p1_ship_coords and start_coord + 3 is not in p1_ship_coords and length == 4) or (start_coord is not in p1_ship_coords and start_coord + 1 is not in p1_ship_coords and start_coord + 2 is not in p1_ship_coords and length == 3) or (start_coord is not in p1_ship_coords and start_coord + 1 is not in p1_ship_coords and length == 2):
+                    if player == 1 and (start_coord not in p1_ship_coords and start_coord + 1 not in p1_ship_coords and start_coord + 2 not in p1_ship_coords and start_coord + 3 not in p1_ship_coords and start_coord + 4 not in p1_ship_coords and length == 5) or (start_coord not in p1_ship_coords and start_coord + 1 not in p1_ship_coords and start_coord + 2 not in p1_ship_coords and start_coord + 3 not in p1_ship_coords and length == 4) or (start_coord not in p1_ship_coords and start_coord + 1 not in p1_ship_coords and start_coord + 2 not in p1_ship_coords and length == 3) or (start_coord not in p1_ship_coords and start_coord + 1 not in p1_ship_coords and length == 2):
                         p1_ship_coords.append(start_coord)
                         p1_ship_coords.append(start_coord + 1)
                         if length > 2:
@@ -177,7 +177,7 @@ def place_ship(length, player):
                         if length > 4:
                             p1_ship_coords.append(start_coord + 4)
                         break
-                    elif player == 2 and start_coord is not in p2_ship_coords and start_coord + 1 is not in p2_ship_coords and start_coord + 2 is not in p2_ship_coords and start_coord + 3 is not in p2_ship_coords and start_coord + 4 is not in p2_ship_coords:
+                    elif player == 2 and (start_coord not in p2_ship_coords and start_coord + 1 not in p1_ship_coords and start_coord + 2 not in p1_ship_coords and start_coord + 3 not in p1_ship_coords and start_coord + 4 not in p1_ship_coords and length == 5) or (start_coord not in p1_ship_coords and start_coord + 1 not in p1_ship_coords and start_coord + 2 not in p1_ship_coords and start_coord + 3 not in p1_ship_coords and length == 4) or (start_coord not in p1_ship_coords and start_coord + 1 not in p1_ship_coords and start_coord + 2 not in p1_ship_coords and length == 3) or (start_coord not in p1_ship_coords and start_coord + 1 not in p1_ship_coords and length == 2):
                         p2_ship_coords.append(start_coord)
                         p2_ship_coords.append(start_coord + 1)
                         if length > 2:
@@ -214,7 +214,7 @@ def place_ship(length, player):
 
 
                 if end_num == start_num:
-                    if player == 1 and end_coord is not in p1_ship_coords and end_coord + 1 is not in p1_ship_coords and end_coord + 2 is not in p1_ship_coords and end_coord + 3 is not in p1_ship_coords and end_coord + 4 is not in p1_ship_coords:
+                    if player == 1 and (start_coord not in p1_ship_coords and start_coord - 1 not in p1_ship_coords and start_coord - 2 not in p1_ship_coords and start_coord - 3 not in p1_ship_coords and start_coord - 4 not in p1_ship_coords and length == 5) or (start_coord not in p1_ship_coords and start_coord - 1 not in p1_ship_coords and start_coord - 2 not in p1_ship_coords and start_coord - 3 not in p1_ship_coords and length == 4) or (start_coord not in p1_ship_coords and start_coord - 1 not in p1_ship_coords and start_coord - 2 not in p1_ship_coords and length == 3) or (start_coord not in p1_ship_coords and start_coord - 1 not in p1_ship_coords and length == 2):
                         p1_ship_coords.append(end_coord)
                         p1_ship_coords.append(end_coord + 1)
                         if length > 2:
@@ -224,7 +224,7 @@ def place_ship(length, player):
                         if length > 4:
                             p1_ship_coords.append(end_coord + 4)
                         break
-                    elif player == 2 and end_coord is not in p2_ship_coords and end_coord + 1 is not in p2_ship_coords and end_coord + 2 is not in p2_ship_coords and end_coord + 3 is not in p2_ship_coords and end_coord + 4 is not in p2_ship_coords:
+                    elif player == 2 and (start_coord not in p2_ship_coords and start_coord - 1 not in p1_ship_coords and start_coord - 2 not in p1_ship_coords and start_coord - 3 not in p1_ship_coords and start_coord - 4 not in p1_ship_coords and length == 5) or (start_coord not in p1_ship_coords and start_coord - 1 not in p1_ship_coords and start_coord - 2 not in p1_ship_coords and start_coord - 3 not in p1_ship_coords and length == 4) or (start_coord not in p1_ship_coords and start_coord - 1 not in p1_ship_coords and start_coord - 2 not in p1_ship_coords and length == 3) or (start_coord not in p1_ship_coords and start_coord - 1 not in p1_ship_coords and length == 2):
                         p2_ship_coords.append(end_coord)
                         p2_ship_coords.append(end_coord + 1)
                         if length > 2:
@@ -247,7 +247,7 @@ def place_ship(length, player):
                 if end_coord > 100 or end_coord < 0:
                     print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
                 else:
-                    if player == 1 and end_coord is not in p1_ship_coords and end_coord - 10 is not in p1_ship_coords and end_coord - 20 is not in p1_ship_coords and end_coord - 30 is not in p1_ship_coords and end_coord - 40 is not in p1_ship_coords:
+                    if player == 1 and (start_coord not in p1_ship_coords and start_coord - 10 not in p1_ship_coords and start_coord - 20 not in p1_ship_coords and start_coord - 30 not in p1_ship_coords and start_coord - 40 not in p1_ship_coords and length == 5) or (start_coord not in p1_ship_coords and start_coord - 10 not in p1_ship_coords and start_coord - 20 not in p1_ship_coords and start_coord - 30 not in p1_ship_coords and length == 4) or (start_coord not in p1_ship_coords and start_coord - 10 not in p1_ship_coords and start_coord - 20 not in p1_ship_coords and length == 3) or (start_coord not in p1_ship_coords and start_coord - 10 not in p1_ship_coords and length == 2):
                         p1_ship_coords.append(start_coord)
                         p1_ship_coords.append(start_coord - 10)
                         if length > 2:
@@ -256,7 +256,7 @@ def place_ship(length, player):
                             p1_ship_coords.append(start_coord - 30)
                         if length > 4:
                             p1_ship_coords.append(start_coord - 40)
-                    elif player == 2:
+                    elif player == 2 and (start_coord not in p2_ship_coords and start_coord - 10 not in p1_ship_coords and start_coord - 20 not in p1_ship_coords and start_coord - 30 not in p1_ship_coords and start_coord - 40 not in p1_ship_coords and length == 5) or (start_coord not in p1_ship_coords and start_coord - 10 not in p1_ship_coords and start_coord - 20 not in p1_ship_coords and start_coord - 30 not in p1_ship_coords and length == 4) or (start_coord not in p1_ship_coords and start_coord - 10 not in p1_ship_coords and start_coord - 20 not in p1_ship_coords and length == 3) or (start_coord not in p1_ship_coords and start_coord - 10 not in p1_ship_coords and length == 2):
                         p2_ship_coords.append(start_coord)
                         p2_ship_coords.append(start_coord - 10)
                         if length > 2:
@@ -275,7 +275,7 @@ def place_ship(length, player):
                 if end_coord > 100 or end_coord < 0:
                     print("YOUR SHIP CANNOT CUT INTO THE SIDE OF THE BOARD!!!")
                 else:
-                    if player == 1 and end_coord is not in p1_ship_coords and end_coord + 10 is not in p1_ship_coords and end_coord + 20 is not in p1_ship_coords and end_coord + 30 is not in p1_ship_coords and end_coord + 40 is not in p1_ship_coords:
+                    if player == 1 and (start_coord not in p1_ship_coords and start_coord + 10 not in p1_ship_coords and start_coord + 20 not in p1_ship_coords and start_coord + 30 not in p1_ship_coords and start_coord + 40 not in p1_ship_coords and length == 5) or (start_coord not in p1_ship_coords and start_coord + 10 not in p1_ship_coords and start_coord + 20 not in p1_ship_coords and start_coord + 30 not in p1_ship_coords and length == 4) or (start_coord not in p1_ship_coords and start_coord + 10 not in p1_ship_coords and start_coord + 20 not in p1_ship_coords and length == 3) or (start_coord not in p1_ship_coords and start_coord + 10 not in p1_ship_coords and length == 2):
                         p1_ship_coords.append(start_coord)
                         p1_ship_coords.append(start_coord + 10)
                         if length > 2:
@@ -284,7 +284,7 @@ def place_ship(length, player):
                             p1_ship_coords.append(start_coord + 30)
                         if length > 4:
                             p1_ship_coords.append(start_coord + 40)
-                    elif player == 2:
+                    elif player == 2 and (start_coord not in p2_ship_coords and start_coord + 10 not in p1_ship_coords and start_coord + 20 not in p1_ship_coords and start_coord + 30 not in p1_ship_coords and start_coord + 40 not in p1_ship_coords and length == 5) or (start_coord not in p1_ship_coords and start_coord + 10 not in p1_ship_coords and start_coord + 20 not in p1_ship_coords and start_coord + 30 not in p1_ship_coords and length == 4) or (start_coord not in p1_ship_coords and start_coord + 10 not in p1_ship_coords and start_coord + 20 not in p1_ship_coords and length == 3) or (start_coord not in p1_ship_coords and start_coord + 10 not in p1_ship_coords and length == 2):
                         p2_ship_coords.append(start_coord)
                         p2_ship_coords.append(start_coord + 10)
                         if length > 2:
