@@ -25,3 +25,21 @@ adult = True if age >= 18 else False
 
 print(f"Adult: {adult}")
 
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   LISTS
+
+family = ["Sam", "Elle", "Sarah", "Preston", "Glenn"]
+
+print(random.choice(family))
+print(*family)   #<<< Unpacking operater -> *   (prints list without brackets and commas)
+
+print(family[-1])
+
+family.insert(3, "Mykel")
+
+family.extend("Jack", "TC", "Kenyan")
+
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   TUPLES
+
+subjects = ("English", "Math", "Science", "History")
+
+print(*subjects)

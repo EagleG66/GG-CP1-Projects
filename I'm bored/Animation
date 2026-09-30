@@ -1,16 +1,54 @@
 import time
 
-progress = 0
+# shading levels --->  @ # 8 = - .
 
-dot = ["."]
+def pattern(type):
 
-while progress < 1000:
+    if type == "zig zag":
+        progress = 0
+        num = 0
+        dot = [".", "."]
+        while progress < 10000:
+            if num >= 0:
+                if len(dot) > 60:
+                    dot.insert(0, "@")
+                elif len(dot) > 40:
+                    dot.insert(0, "8")
+                elif len(dot) > 20:
+                    dot.insert(0, "=")
+                else:
+                    dot.insert(0, ".")
+            else:
+                dot.remove(dot[0])
 
-
-    dot.append(".")
+            
+            if num >= 60:
+                num = -60
+            
+            print(*dot)
+            time.sleep(0.02)
+            num += 5
+            progress += 1
     
-    print("".join(dot))
+    if type == "diamond":
+        progress = 0
+        num = 0
+        design = ["@" * 100]
+        while progress < 10000:
+            
+            if num >= 60:
+                num = -60
+            elif num >= 0:
+                design.insert(len(design)//2, "-")
+            else:
+                design.remove(design[len(design)//2])
+            
+            
+            print(*design)
+            time.sleep(0.02)
+            num += 1
+            progress += 1
 
-    time.sleep(0.02)
-    
-    progress += 1
+
+
+pattern("diamond")
