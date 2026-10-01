@@ -7,17 +7,17 @@ def pattern(type):
     if type == "zig zag":
         progress = 0
         num = 0
-        dot = [".", "."]
+        dot = []
         while progress < 10000:
             if num >= 0:
                 if len(dot) > 60:
                     dot.insert(0, "@")
                 elif len(dot) > 40:
-                    dot.insert(0, "8")
+                    dot.insert(0, " ")
                 elif len(dot) > 20:
-                    dot.insert(0, "=")
-                else:
-                    dot.insert(0, ".")
+                    dot.insert(0, "@")
+                elif len(dot) >= 0:
+                    dot.insert(0, " ")
             else:
                 dot.remove(dot[0])
 
@@ -33,13 +33,13 @@ def pattern(type):
     if type == "diamond":
         progress = 0
         num = 0
-        design = ["@" * 100]
+        design = ["@" * 200]
         while progress < 10000:
             
-            if num >= 60:
-                num = -60
+            if num >= 1:
+                num = -1
             elif num >= 0:
-                design.insert(len(design)//2, "-")
+                design.insert(len(design)//2, " ")
             else:
                 design.remove(design[len(design)//2])
             
@@ -51,4 +51,4 @@ def pattern(type):
 
 
 
-pattern("diamond")
+pattern("zig zag")
