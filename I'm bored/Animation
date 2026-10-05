@@ -1,91 +1,13 @@
 import time
 
 # shading levels --->  @ # 8 = - .
-
-def pattern(type):
-
-    if type == "zig zag":
-        progress = 0
-        num = 0
-        dot = []
-        while progress < 10000:
-            if num >= 0:
-                if len(dot) > 150:
-                    dot.insert(0, "%")
-                elif len(dot) > 140:
-                    dot.insert(0, " ")
-                elif len(dot) > 130:
-                    dot.insert(0, "8")
-                elif len(dot) >= 120:
-                    dot.insert(0, " ")
-                elif len(dot) > 110:
-                    dot.insert(0, "\"")
-                elif len(dot) > 100:
-                    dot.insert(0, " ")
-                elif len(dot) > 90:
-                    dot.insert(0, "$")
-                elif len(dot) >= 80:
-                    dot.insert(0, " ")
-                if len(dot) > 70:
-                    dot.insert(0, "*")
-                elif len(dot) > 60:
-                    dot.insert(0, " ")
-                elif len(dot) > 50:
-                    dot.insert(0, "=")
-                elif len(dot) >= 40:
-                    dot.insert(0, " ")
-                elif len(dot) > 30:
-                    dot.insert(0, ",")
-                elif len(dot) > 20:
-                    dot.insert(0, " ")
-                elif len(dot) > 10:
-                    dot.insert(0, "@")
-                elif len(dot) >= 0:
-                    dot.insert(0, " ")
-            else:
-                dot.remove(dot[0])
-
-            
-            if num >= 60:
-                num = -60
-            
-            print(*dot)
-            time.sleep(0.01)
-            num += 5
-            progress += 1
-    
-    if type == "diamond":
-        progress = 0
-        num = 0
-        design = ["@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@","@",]
-        while progress < 1000:
-            
-            if num >= 10:
-                num = -10
-            elif num >= 0:
-                design.insert(len(design)//2, " ")
-                design.insert(len(design)//2, " ")
-                design.remove(design[0])
-            else:
-                design.remove(design[len(design)//2])
-                design.remove(design[len(design)//2])
-                design.insert(0, "@")
-
-            if len(design) >= 102:
-                design.remove(design[100])
-                design.remove(design[99])
-            
-            
-            print(*design)
-            time.sleep(0.02)
-            num += 1
-            progress += 1
-
+"""
 design1 = ["@","@","@","@","@","@","@","@","@","@"]
 design2 = [" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"]
 progress = 0
 
-while progress < 10:
+# pattern num 1
+while progress < 5:
 
     for i in range(50):
         design1.insert(0," ")
@@ -104,3 +26,28 @@ while progress < 10:
         print(*design2)
 
         time.sleep(0.01)
+
+    progress += 1
+"""
+
+
+
+design = ["@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"]
+progress = 0
+
+# pattern num 1
+while progress < 20:
+
+    for i in range(50):
+        design.insert(0," ")
+        print(*design)
+
+        time.sleep(0.01)
+    
+    for i in range(50):
+        design.remove(design[0])
+        print(*design)
+
+        time.sleep(0.01)
+
+    progress += 1
