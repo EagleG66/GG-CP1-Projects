@@ -94,7 +94,7 @@ while progress < 10:
         design2.remove(design2[0])
         print(*design2)
 
-        time.sleep(0.02)
+        time.sleep(0.01)
     
     for i in range(50):
         design1.remove(design1[0])
@@ -103,4 +103,4 @@ while progress < 10:
         design2.insert(0," ")
         print(*design2)
 
-        time.sleep(0.02)
+        time.sleep(0.01)
