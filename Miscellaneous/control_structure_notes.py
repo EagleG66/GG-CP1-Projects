@@ -46,9 +46,24 @@ family.insert(3, "Mykel")"""
 print(*subjects)
 """
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   FOR LOOPS
-
+"""
 family = ["Sam", "Elle", "Sarah", "Preston", "Glenn"]
 
 for i in family:
     print(f"Good morning {i}!")
-    time.sleep(1)
+    time.sleep(1)"""
+
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   MAPPING
+
+mapping = "repeats the same thing to everything in a list"
+
+def times(number):
+    return number * number
+
+sq_nums = int(input("How many numbers do you want to square: "))
+
+nums = range(1, sq_nums + 1)
+
+sq_nums = map(times,nums)
+
+print(*list(sq_nums))
