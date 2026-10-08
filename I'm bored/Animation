@@ -31,7 +31,7 @@ while progress < 5:
 """
 
 
-
+"""
 design1 = ["@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@"]
 design2 = [" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@","@"," "," "," "," "," "," "," ","@","@","@","@","@","@","@","@","@"]
 
@@ -58,4 +58,60 @@ while progress < 20:
 
         time.sleep(0.01)
 
-    progress += 1
+    progress += 1"""
+
+
+
+def design(start_point, thickness, spacing, lines, speed, change_time1, direction1, change_time2=0, direction2=0, change_time3=0, direction3=0, change_time4=0, direction4=0):
+
+    iterator = [" "*start_point, ("@"*thickness + " "*spacing) * lines]
+
+    for i in range(change_time1):
+        print(*iterator)
+
+        if direction1 == "R":
+            iterator.insert(0, " ")
+        elif direction1 == "L":
+            iterator.remove(iterator[0])
+        elif direction1 == "S":
+            pass
+
+        time.sleep(speed)
+
+    for i in range(change_time2):
+        print(*iterator)
+
+        if direction2 == "R":
+            iterator.insert(0, " ")
+        elif direction2 == "L":
+            iterator.remove(iterator[0])
+        elif direction1 == "S":
+            pass
+
+        time.sleep(speed)
+
+    for i in range(change_time3):
+        print(*iterator)
+
+        if direction3 == "R":
+            iterator.insert(0, " ")
+        elif direction3 == "L":
+            iterator.remove(iterator[0])
+        elif direction1 == "S":
+            pass
+
+        time.sleep(speed)
+
+    for i in range(change_time4):
+        print(*iterator)
+
+        if direction4 == "R":
+            iterator.insert(0, " ")
+        elif direction4 == "L":
+            iterator.remove(iterator[0])
+        elif direction1 == "S":
+            pass
+
+        time.sleep(speed)
+
+design(50, 2, 5, 50, 0.05, 50, "R", 50, "S", 50, "L")
