@@ -71,7 +71,13 @@ def design(start_point, thickness, spacing, lines, speed, change_time1, directio
 
         if direction1 == "R":
             iterator.insert(0, " ")
+        elif direction1 == "RR":
+            iterator.insert(0, " ")
+            iterator.insert(0, " ")
         elif direction1 == "L":
+            iterator.remove(iterator[0])
+        elif direction1 == "LL":
+            iterator.remove(iterator[0])
             iterator.remove(iterator[0])
         elif direction1 == "S":
             pass
@@ -83,7 +89,13 @@ def design(start_point, thickness, spacing, lines, speed, change_time1, directio
 
         if direction2 == "R":
             iterator.insert(0, " ")
+        elif direction2 == "RR":
+            iterator.insert(0, " ")
+            iterator.insert(0, " ")
         elif direction2 == "L":
+            iterator.remove(iterator[0])
+        elif direction2 == "LL":
+            iterator.remove(iterator[0])
             iterator.remove(iterator[0])
         elif direction1 == "S":
             pass
@@ -95,7 +107,13 @@ def design(start_point, thickness, spacing, lines, speed, change_time1, directio
 
         if direction3 == "R":
             iterator.insert(0, " ")
+        elif direction3 == "RR":
+            iterator.insert(0, " ")
+            iterator.insert(0, " ")
         elif direction3 == "L":
+            iterator.remove(iterator[0])
+        elif direction3 == "LL":
+            iterator.remove(iterator[0])
             iterator.remove(iterator[0])
         elif direction1 == "S":
             pass
@@ -107,11 +125,27 @@ def design(start_point, thickness, spacing, lines, speed, change_time1, directio
 
         if direction4 == "R":
             iterator.insert(0, " ")
+        elif direction4 == "RR":
+            iterator.insert(0, " ")
+            iterator.insert(0, " ")
         elif direction4 == "L":
+            iterator.remove(iterator[0])
+        elif direction4 == "LL":
+            iterator.remove(iterator[0])
             iterator.remove(iterator[0])
         elif direction1 == "S":
             pass
 
         time.sleep(speed)
 
-design(50, 2, 5, 50, 0.05, 50, "R", 50, "S", 50, "L")
+time_ = 10
+
+speed = 0.1
+
+while True:
+    design(50, 2, 5, 50, speed, time_, "RR", time_, "L")
+
+    if speed > 0.01:
+        speed -= 0.01
+    else:
+        pass
