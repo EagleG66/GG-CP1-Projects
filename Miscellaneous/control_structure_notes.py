@@ -54,7 +54,7 @@ for i in family:
     time.sleep(1)"""
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   MAPPING
-
+"""
 mapping = "repeats the same thing to everything in a list"
 
 def times(number):
@@ -66,4 +66,20 @@ nums = range(1, sq_nums + 1)
 
 sq_nums = map(times,nums)
 
-print(*list(sq_nums))
+print(*list(sq_nums))"""
+
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   ACTIVITY DIAGRAM
+
+activity = "rect with round corners"
+
+decision = "diamond"
+
+variable = "rect with sharp corners"
+
+flow = "arrow"
+
+initial_state = "circle"
+
+final_state = "circle inside a circle"
+
+swim_lanes = "different columns/rows that seperate different users/computers/AI"
