@@ -83,3 +83,10 @@ initial_state = "circle"
 final_state = "circle inside a circle"
 
 swim_lanes = "different columns/rows that seperate different users/computers/AI"
+
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   DEBUGGING TYPES
+
+step1 = "read the error message"
+
+
+
