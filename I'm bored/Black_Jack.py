@@ -7,4 +7,6 @@ deck = ["1 of Hearts", "2 of Hearts", "3 of Hearts", "4 of Hearts", "5 of Hearts
 while True:
 
     input("Press ENTER to begin a new game.")
-    
+    print("\033[H\033[J", end="")
+
+    input("Have player 2 look away while you get your cards. Press ENTER when you are ready.")
