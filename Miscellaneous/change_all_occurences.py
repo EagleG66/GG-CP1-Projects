@@ -1,0 +1,2 @@
+if ord(i) == 33 or (ord(i) >= 35 and ord(i) <= 38) or (ord(i) >= 40 and ord(i) <= 46) or (ord(i) >= 58 and ord(i) <= 64) or (ord(i) == 91) or (ord(i) >= 93 and ord(i) <= 95) or (ord(i) >= 123 and ord(i) <= 125):
+        special_char = True

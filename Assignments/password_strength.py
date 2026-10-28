@@ -16,36 +16,19 @@ print("\t\t\t- any special characters")
 
 password = list(input("\nPlease type in the password you would like to test: "))
 
-def uppercase(character):
-    if character.isupper():
-        upper = True
-
-def lowercase(character):
-    if character.islower():
-        lower = True
-
-def numerical(character):
-    if character.isnumeric():
-        number = True
-
-def special(character):
-    if ord(character) == 33 or (ord(character) >= 35 and ord(character) <= 38) or (ord(character) >= 40 and ord(character) <= 46) or (ord(character) >= 58 and ord(character) <= 64) or (ord(character) == 91) or (ord(character) >= 93 and ord(character) <= 95) or (ord(character) >= 123 and ord(character) <= 125):
-        special_char = True
 
 if len(password) >= 8:
     score += 1
 
 for i in password:
-    uppercase(i)
-
-for i in password:
-    lowercase(i)
-
-for i in password:
-    numerical(i)
-
-for i in password:
-    special(i)
+    if i.isupper():
+        upper = True
+    if i.islower():
+        lower = True
+    if i.isnumeric():
+        number = True
+    if ord(i) == 33 or (ord(i) >= 35 and ord(i) <= 38) or (ord(i) >= 40 and ord(i) <= 46) or (ord(i) >= 58 and ord(i) <= 64) or (ord(i) == 91) or (ord(i) >= 93 and ord(i) <= 95) or (ord(i) >= 123 and ord(i) <= 125):
+        special_char = True
 
 
 if upper:
