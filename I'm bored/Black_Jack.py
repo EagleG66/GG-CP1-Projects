@@ -10,3 +10,5 @@ while True:
     print("\033[H\033[J", end="")
 
     input("Have player 2 look away while you get your cards. Press ENTER when you are ready.")
+    p1card1 = 
+    print(f"Your first card is the {}")
