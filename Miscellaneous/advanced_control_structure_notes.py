@@ -7,8 +7,11 @@ def birthday(name):
     print("Happy Birthday to you")
     print(f"Happy Birthday dear {name}")
     print("Happy Birthday to you")
+    scare = 154
 
-birthday("Tia")
+    return name, scare
+
+user, spook = birthday("Tia")
 
 
 

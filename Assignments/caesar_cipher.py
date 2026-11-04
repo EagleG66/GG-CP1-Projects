@@ -1,10 +1,12 @@
 # caesar cipher GLENN GUDMUNSON
 
 caesar_list = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-
+bad_char = False
 
 #encode function
 def cipherEncode(letter):
+
+    """This function sets each letter of the alphabet to the new letter, depending on what the shift is. It does this positively, and then returns the letter"""
 
     caesar_list1 = {
         "a": caesar_list[(0 + shift) % 26], 
@@ -40,7 +42,7 @@ def cipherEncode(letter):
 
 #decode function
 def cipherDecode(letter):
-
+    """This function sets each letter of the alphabet to the new letter, depending on what the shift is. It does this negatively, and then returns the letter"""
     caesar_list1 = {
         "a": caesar_list[(0 - shift) % 26], 
         "b": caesar_list[(1 - shift) % 26], 
@@ -73,11 +75,42 @@ def cipherDecode(letter):
     if letter.lower() in caesar_list1:
         return caesar_list1[letter.lower()]
 
-shift = int(input("What shift value would you like: "))
+while True:
+    try:
+        code = int(input("Would you like to encode(type 1) or decode(type 2) the message: "))
+    except:
+        print("That is not a number. Please try again")
+    else:
+        if code == 1 or code == 2:
+            break
+        else:
+            print("That is not one of the options. Please try again")
 
-words = input("what letters would you like to encode(only use normal letters, no special characters): ")
 
-code = int(input("Would you like to encode(type 1) or decode(type 2) the message: "))
+
+while True:
+    try:
+        shift = int(input("What shift value would you like: "))
+    except:
+        print("That is not a number. Please try again")
+    else:
+        break
+
+while True:
+    try:
+        words = input("what letters would you like to encode(only use normal letters, no special characters): ")
+    except:
+        pass
+    else:
+        for letter in list(words):
+            if letter in caesar_list:
+                pass
+            else:
+                bad_char = True
+                break
+        if bad_char:
+            break
+
 
 if code == 1:
     shifted_list = map(cipherEncode, list(words))
