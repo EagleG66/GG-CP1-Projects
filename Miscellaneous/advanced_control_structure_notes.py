@@ -26,13 +26,13 @@ step3 = "import the library"
 import turtle as t
 
 t.showturtle()
-t.width(2)
+t.width(10)
 t.speed(100)
 
 for i in range(10000):
     t.hideturtle()
-    t.forward(i/10)
-    t.left(20)
+    t.forward(i/100)
+    t.left(2)
 
 
 
