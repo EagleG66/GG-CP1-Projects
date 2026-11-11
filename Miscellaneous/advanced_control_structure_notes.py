@@ -35,6 +35,25 @@ for i in range(10000):
     t.left(2)
 
 
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   NESTED LOOPS
+
+
+people = ["Hugo", "Daniel", "Glenn", "Logan"]
+
+for i in range(4):
+    print("HI", end=" ")
+    for person in people:
+        if person == people[0]:
+            print(person, end="")
+        else:
+            print(f" and {person}", end="")
+    print("\n")
+
+
+
+
+
+
 
 
 
