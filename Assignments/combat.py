@@ -12,13 +12,23 @@ monster = [30, 14, 4, 4, 3]
 
 def playerTurn():
 
-    attack_type = int(input("""What action would you like to take?
-
-    1. Normal attack
-    2. Special attack(You will hurt yourself but you will do more damage!)
-    3. Drink a health potion(regain 9 health)
-    \n\n"""))
-    print("\033[H\033[J", end="")
+    
+    while True:
+        try:
+            attack_type = int(input("""What action would you like to take?
+        
+            1. Normal attack
+            2. Special attack(You will hurt yourself but you will do more damage!)
+            3. Drink a health potion(regain 9 health)
+            \n\n"""))
+            print("\033[H\033[J", end="")
+        except:
+            print("That is not a number. Please Try Again.")
+        else:
+            if attack_type >= 1 and attack_type <= 3:
+                break
+            else:
+                print("That is not one of the options. Please Try Again.")
 
 
     # Normal Attack
@@ -152,16 +162,29 @@ while True:
 
     print("Welcome to training! First I need to know some things about you!\n")
 
-    user_name = input("What is your name: ")
-    print("\033[H\033[J", end="")
 
-    fighter_type = int(input("""\n\n
-    what type of fighter are you?
-    - soldier[1]
-    - rogue[2]
-    - mage[3]
-    \n\n"""))
-    print("\033[H\033[J", end="")
+    while True:
+        try:
+            user_name = input("What is your name: ")
+            print("\033[H\033[J", end="")
+
+    while True:
+        try:
+            fighter_type = int(input("""\n\n
+            what type of fighter are you?
+            - soldier[1]
+            - rogue[2]
+            - mage[3]
+            \n\n"""))
+            print("\033[H\033[J", end="")
+        except:
+            print("That is not a number. Please Try Again.")
+        else:
+            if fighter_type >= 1 and fighter_type <= 3:
+                break
+            else:
+                print("That is not one of the options. Please Try Again.")
+            
 
 
     if fighter_type == 1:
