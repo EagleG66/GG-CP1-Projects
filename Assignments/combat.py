@@ -163,10 +163,9 @@ while True:
     print("Welcome to training! First I need to know some things about you!\n")
 
 
-    while True:
-        try:
-            user_name = input("What is your name: ")
-            print("\033[H\033[J", end="")
+
+    user_name = input("What is your name: ")
+    print("\033[H\033[J", end="")
 
     while True:
         try:
@@ -223,6 +222,7 @@ while True:
 
 
     if input("Would you like to play again?(Type anything and press ENTER for yes, Just press ENTER for no): "):
+        print("\033[H\033[J", end="")
         continue
     else:
         break
