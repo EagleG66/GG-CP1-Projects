@@ -1,13 +1,8 @@
 # GLENN GUDMUNSON order up
 
-menu = {
-    "Drinks": {
-        "Dr. Pepper": 2.50,
-        "Root Beer": 2,
-        "Fresca": 1.75,
-        "Water": 0
-    },
+print("\033[H\033[J", end="")
 
+menu = {
     "Main Courses": {
         "Chicken Nuggets": 4.25,
         "Burger": 5.75,
@@ -16,17 +11,80 @@ menu = {
     },
 
     "Sides": {
-        "1. Waffle Fries": 3.25,
-        "2. Ice Cream": 2.00,
-        "3. Mac & Cheese": 2.75,
-        "4. Chick-fil-a sauce": 0,
-        "5. Onion Rings": 3.50
+        "Waffle Fries": 3.25,
+        "Ice Cream": 2.00,
+        "Mac & Cheese": 2.75,
+        "Onion Rings": 3.50
+    },
+    "Drinks": {
+        "Dr. Pepper": 2.50,
+        "Root Beer": 2,
+        "Sprite": 1.75,
+        "Water": 0
     }
 }
+print("Here is the menu:")
+
+for food in menu.keys():
+    print(f"\n{food}")
+    for item in menu[food]:
+        print(f" - {item}")
 
 
 
-drink = input(f"What drink would you like?\n\n")
+while True:
+    try:
+        main_course = input(f"\nWhich main course would you like: ").title()
+    except:
+        print("That is not an option. Please try again.")
+    else:
+        if main_course in menu["Main Courses"]:
+            break
+        else:
+            print("That is not an option. Please try again.")
+
+while True:
+    try:
+        side1 = input(f"\nWhich side would you like for your first side: ").title()
+    except:
+        print("That is not an option. Please try again.")
+    else:
+        if side1 in menu["Sides"]:
+            break
+        else:
+            print("That is not an option. Please try again.")
+
+
+while True:
+    try:
+        side2 = input(f"\nWhich side would you like for your second side: ").title()
+    except:
+        print("That is not an option. Please try again.")
+    else:
+        if side2 in menu["Sides"]:
+            break
+        else:
+            print("That is not an option. Please try again.")
+
+
+while True:
+    try:
+        drink = input(f"\n\nWhich drink would you like: ").title()
+    except:
+        print("That is not an option. Please try again.")
+    else:
+        if drink in menu["Drinks"]:
+            break
+        else:
+            print("That is not an option. Please try again.")
+
+total = menu["Main Courses"][main_course] + menu["Sides"][side1] + menu["Sides"][side2] + menu["Drinks"][drink]
+
+print(f"Your order has the following items:\n - {main_course}\n - {side1}\n - {side2}\n - {drink}\nYour total comes to ${total}")
+
+print("\nI threw in 6 chick-fil-a sauces for you... My pleasure")
+
+
 
 
 
