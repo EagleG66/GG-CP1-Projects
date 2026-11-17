@@ -1,5 +1,7 @@
 # GLENN GUDMUNSON order up
 
+from datetime import datetime as dt
+
 print("\033[H\033[J", end="")
 
 menu = {
@@ -23,6 +25,10 @@ menu = {
         "Water": 0
     }
 }
+
+
+print("Hello! Welcome to Chick-fil-a! We are now implementing a \"Chicken Hour\" where everything is 50\% \off from 9:00am to 10:00am")
+
 print("Here is the menu:")
 
 for food in menu.keys():
@@ -78,9 +84,17 @@ while True:
         else:
             print("That is not an option. Please try again.")
 
+
+
+
+
+
+now = dt.now()
+
 total = menu["Main Courses"][main_course] + menu["Sides"][side1] + menu["Sides"][side2] + menu["Drinks"][drink]
 
-print(f"Your order has the following items:\n - {main_course}\n - {side1}\n - {side2}\n - {drink}\nYour total comes to ${total}")
+if now.strftime(%H) >= 9 and now.strftime(%H) <= 10 and now.strftime(%p) == "AM":
+    print(f"Your order has the following items:\n - {main_course}\n - {side1}\n - {side2}\n - {drink}\nYour total comes to ${round(2, total/2)}")
 
 print("\nI threw in 6 chick-fil-a sauces for you... My pleasure")
 
