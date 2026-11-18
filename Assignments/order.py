@@ -88,13 +88,9 @@ while True:
 
 
 
-
-now = dt.now()
-
 total = menu["Main Courses"][main_course] + menu["Sides"][side1] + menu["Sides"][side2] + menu["Drinks"][drink]
 
-if now.strftime(%H) >= 9 and now.strftime(%H) <= 10 and now.strftime(%p) == "AM":
-    print(f"Your order has the following items:\n - {main_course}\n - {side1}\n - {side2}\n - {drink}\nYour total comes to ${round(2, total/2)}")
+print(f"Your order has the following items:\n - {main_course}\n - {side1}\n - {side2}\n - {drink}\nYour total comes to ${total}")
 
 print("\nI threw in 6 chick-fil-a sauces for you... My pleasure")
 
