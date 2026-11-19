@@ -64,6 +64,7 @@ def leftShoot(length):
     for i in range(40):
         cannon_ball.forward(length)
         cannon_ball.right(1)
+    cannon_ball.hideturtle()
 
 
 
@@ -121,6 +122,7 @@ def rightShoot(length):
     for i in range(40):
         cannon_ball.forward(length)
         cannon_ball.left(1)
+    cannon_ball.hideturtle()
 
 
 
