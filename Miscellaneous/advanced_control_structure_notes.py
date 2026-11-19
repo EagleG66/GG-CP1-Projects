@@ -82,12 +82,31 @@ print(car.get("model")) # If you use this instead, it won't throw an error  if t
 
 # make a dictionary inside a dictionary and to call it, you do avatar[fire][iroh]
 
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   ARGS and KWARGS
+
+def hello(*args):    # <<<<<<< creates a tuple
+    for name in args:
+        print(f"Hello {name}")
 
 
+hello("Glenn", "Pedro", "Salesi", "Hugo", "Joaquin", "Daniel")
 
+def clean(**kwargs):     # <<<<<<<<<<<<<<<<<<<<< CREATES A DICTIONARY
+    if kwargs.get("type") == "str":
+        return kwargs.get("data").strip().lower()
+    elif kwargs.get("type") == "int":
+        return int(kwargs.get("data"))
+    elif kwargs.get("type") == "float":
+        return float(kwargs.get("data"))
+    elif kwargs.get("type") == "list":
+        for thing in kwargs.get("data"):
+            lst = []
+            lst.append(str(thing))
+        return lst
+    elif kwargs.get("type") == "bool":
+        return f"{kwargs.get("data")}"
 
-
-
+print(clean(type="int", data="123456789"))  # <<<<<<< Can define stuff for the functions dictionary
 
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   VOCABULARY
