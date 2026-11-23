@@ -54,6 +54,6 @@ while True:
             print("\nThat is not one of the available operations. Please try again")    # <<<< Stupid-proofing
 
 
-    if input("\nIf you would like to do another operation, press ENTER. If not, type something and press ENTER: "):  #<<<<<Checking to see if they want to do another
+    if input("\nIf you would like to do another operation, press ENTER. If not, type something and press ENTER: "):  #<<<<<Checking to see if they want to do another calculation
         break
 
